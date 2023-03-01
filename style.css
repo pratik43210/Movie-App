@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,500;0,700;1,300&family=Fira+Sans:wght@300;400;500;700&display=swap');
+
+/* 
+font-family: 'Bitter', serif;
+font-family: 'Fira Sans', sans-serif; 
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --darkaccent: #000;
+    --accent: rgb(149, 0, 149);
+    --background: #222;
+}
+
+html{
+    
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    color: aliceblue;
+}
+
+#mov-container{
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.mov-card{
+    margin:10px;
+    padding: inherit;
+    min-width: 25%;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,.5);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.title{
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.info{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.desc{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background: linear-gradient(rgb(209, 130, 209),#fff);
+    color: #222;
+    padding: 1rem;
+    max-height: 100%;
+    overflow: auto;
+    transform: translateY(112%);
+}
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(185, 150, 185);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background:  linear-gradient(#000,  var(--accent), red);
+    border-radius: 100vw;
+}
+
+.mov-card:hover .desc{
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s;
+}
+
+.current{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.pg-change{
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--background);
+    color: aliceblue;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px -1px rgba(0,0,0,0.5) ;
+    /* text-shadow: 0px 0px 5px  rgba(0,0,0,0.3); */
+}
+
+.main-header{
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--darkaccent);
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+.s-el{
+    padding: 0;
+    margin: 10px 5px 10px 0;
+    display: flex;
+    min-width: 10vw;
+}
+
+#search, #s-btn{
+    border:none;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 5px 10px;
+    color: #fff;
+    background: linear-gradient(rgb(42, 9, 42), var(--accent));
+    
+    box-shadow: 0 0 8px #000;
+}
+
+#search{
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+}
+
+#search:active{
+    border: none;
+}
+
+#s-btn{
+    border-radius: 0 20px 20px 0;
+}
+
+.brand{
+    height: 60px;
+    width: 100%;
+}
+
+.mov-icon{
+    max-width:50px;
+    width: 15vw;
+    opacity: 1;
+    margin: 0 10px;
+}
+
+.brand-title{
+    color: rgb(255, 236, 255);
+    font-size: 2rem;
+    text-shadow: 0 0 10px #000;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.rating{
+    gap:5px;
+    padding: 5px;
+    background: #111;
+    border-radius: 5px;
+}
+
+.results{
+    margin: 10px;
+}
+
+#targetPg{
+    max-width:40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.gotoPN{
+    margin: 10px;
+}
+
+.jump{
+    background-color: rgb(24, 8, 24);
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.genre{
+    position: sticky;
+    top: 60px;
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+}
+
+.dropdown{
+    font-size: 1.4rem;
+    color: var(--accent);
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    border: solid 1px #262527;
+}
+
+
+.tag{
+    height: 50px;
+    margin: 20px 10px;
+    padding: 25px 20px;
+    border-radius: 50px;
+    background-color: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 4px 10px 0 #000;
+}
+
+#tags{
+    height: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+#tags::-webkit-scrollbar-track{
+    background: rgb(27, 20, 27);
+    border-radius: 100vw;
+}
+
+.clear{
+    background-color: rgb(0, 122, 0);
+    /* color: #000; */
+}
+
+.clear:hover{
+    background: rgb(0, 255, 0);
+}
+
+.drop-container{
+    border-radius: 50%;
+    height: 40px;
+    width:40px;
+    background: #555;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0 0 5px 1px #000;
+    transform: translateY(-18px) ;
+}
+
+.collapse{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.italic{
+    font-style: italic;
+}

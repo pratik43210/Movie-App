@@ -1,0 +1,122 @@
+/* 
+    --darkaccent: #000;
+    --accent: rgb(149, 0, 149);
+    --background: #222;
+*/
+
+/* Responsive */
+
+@media only screen and (max-width:786px) {
+    #mov-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .mov-card{
+        min-width: 33.33%;
+    }
+}
+
+@media only screen and (max-width:576px) and (orientation:portrait) {
+    #mov-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .mov-card{
+        min-width: 30%;
+    }
+    .brand-title{
+        font-size: 5.5vw;
+    }
+}
+
+/* util classes */
+
+.hide{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-vt{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.bitter{
+    font-family: 'Bitter', serif;
+}
+
+.fira{
+    font-family: 'Fira Sans', sans-serif; 
+}
+
+.muted{
+    opacity: 0.4;
+}
+
+.lgtgrn{
+    color: lightgreen;
+}
+
+.green{
+    color:rgb(4, 255, 58);
+}
+
+.yellow{
+    color: rgb(255, 255, 66);
+}
+
+.red{
+    color:rgb(255, 47, 0);
+}
+
+.accent{
+    color:var(--accent);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.aligned-center{
+    align-items: center;
+}
+
+.justified-center{
+    justify-content: center;
+}
+
+.sp-bw{
+    justify-content: space-around;
+}
+
+.flip{
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+}
+
+.expand{
+    height: 250px;
+    transition: 0.5s ease;
+}
+
+.reduce{
+    height: 20px;
+    transition: 0.5s ease;
+}
+
+.active-genre{
+    background-color: rgb(165, 38, 255);
+}

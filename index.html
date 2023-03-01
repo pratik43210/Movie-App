@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="util.css">
+    <link rel="icon" href="../img/mov-icon.png" type="image/icon">
+    <script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/08b1c2a6bb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="main-header flex" onclick=scrollHandler()>
+        <div class="brand flex aligned-center">
+            <img src="../img/mov-icon.png" alt="" class="mov-icon flex">
+            <p class="brand-title flex">Movies</p>
+        </div>
+
+        <nav>   
+            <form class="s-el">
+                <div class="div flex">
+                    <input type="search" placeholder="search" id="search">
+                    <button id="s-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </nav>
+    </header>
+
+    <div class="collapse">
+        <div class="genre reduce">
+            <div class="flex" id="tags">
+                
+            </div>
+        </div>
+        <div class="dropdown flex justified-center"><div class="drop-container flex-centered"><i class="fa-solid fa-caret-down drop"></i></div></div>
+    </div>
+
+    <div class="navigation flex-centered">
+        <button class="prev pg-change muted"><i class="fa-solid fa-chevron-left accent"></i> Prev</button>
+        <div class="current bitter">1</div>
+        <button class="next pg-change">Next <i class="fa-solid fa-chevron-right accent"></i></button>
+    </div>
+
+    <form class="gotoPN flex-centered">
+        <label for="targetPg">Jump to page:</label>
+        <input type="number" min="0" id="targetPg" name="targetPg">
+        <input type="submit" value="Go" class="jump">
+    </form>
+
+    <section class="flex-centered result-details">
+        <div class="results">
+            
+        </div>
+        <div class="home green hide pointer">Back to home <i class="fa-solid fa-rotate-left"></i></div>
+    </section>
+
+    <div class="container">
+    <div id="mov-container">
+        
+    </div>
+    </div>
+
+    
+    <footer>
+        <div class="flex-centered">
+            <button class="prev pg-change muted"><i class="fa-solid fa-chevron-left accent"></i> Prev</button>
+            <div class="current bitter" id="current">1</div>
+            <button class="next pg-change">Next <i class="fa-solid fa-chevron-right accent"></i></button>
+        </div>
+        
+    </footer>
+</body>
+</html>
