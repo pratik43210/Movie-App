@@ -1,6 +1,8 @@
+import SECRET_KEY from "./apikey.js";
+
 /** Links */
 
-const API_KEY='api_key=cce5f3520cf260a391ebb2ad4e9a8f89';
+const API_KEY="api_key="+SECRET_KEY;
 const Base_URL="https://api.themoviedb.org/3";
 const img_URL="https://image.tmdb.org/t/p/w500";
 const API_URL=Base_URL+"/discover/movie?sort_by=popularity.desc&"+API_KEY;
@@ -364,9 +366,9 @@ formGt.addEventListener('submit',async (e)=>{
 });
 
 /**Open/close collapsable section */
-dropCont=document.querySelector('.drop-container');
-dropIcon=document.querySelector('.drop');
-dropEl=document.querySelector('.genre');
+const dropCont=document.querySelector('.drop-container');
+const dropIcon=document.querySelector('.drop');
+const dropEl=document.querySelector('.genre');
 let flag=0;
 
 dropCont.addEventListener('click',()=>{

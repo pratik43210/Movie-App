@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="util.css">
     <link rel="icon" href="../img/mov-icon.png" type="image/icon">
-    <script defer src="script.js"></script>
+    <script defer type="module" src="script.js"></script>
     <script defer src="https://kit.fontawesome.com/08b1c2a6bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -45,7 +45,7 @@
 
     <form class="gotoPN flex-centered">
         <label for="targetPg">Jump to page:</label>
-        <input type="number" min="0" id="targetPg" name="targetPg">
+        <input type="number" min="1" id="targetPg" name="targetPg">
         <input type="submit" value="Go" class="jump">
     </form>
 
