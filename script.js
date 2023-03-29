@@ -22,6 +22,7 @@ const pgSearch=document.querySelector('#targetPg');
 const currPN=document.querySelector('#current');
 const tagsEl=document.querySelector('#tags');
 const MovieIcon=document.querySelector('.brand-title');
+const MainHeader=document.querySelector('.main-header');
 
 let currURL='';
 let searchMovURL='';
@@ -207,7 +208,7 @@ const DisplayAll=data=>{
     movContainer.innerHTML='';
 
     data.forEach(movie => {
-        const {title, poster_path, vote_average, overview, adult}=movie;
+        const {title, poster_path, vote_average, overview}=movie;
         if(poster_path){
             imgSrc=img_URL+poster_path;
         }else{
@@ -223,7 +224,7 @@ const DisplayAll=data=>{
         <div class="desc bitter">
         <p style="font-weight:700; margin:5px 0">Overview:</p>
             ${overview}
-        </div>`
+        </div>`;
 
         movContainer.appendChild(movieEl);
     });
@@ -389,6 +390,6 @@ dropCont.addEventListener('click',()=>{
 
 
 /**Scroll */
-const scrollHandler=()=>{
+MainHeader.addEventListener('click',()=>{
     return window.scrollTo(0,0);
-}
+});
